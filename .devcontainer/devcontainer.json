@@ -1,0 +1,14 @@
+{
+    "name": "vue-project",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+    "customizations": {
+		"vscode": {
+			"extensions": [
+				"Vue.volar"
+			]
+		}
+    },
+    "forwardPorts": [5173],
+    "postCreateCommand": "npm create vue@latest -y -- vue-project --vue-router --pinia --eslint --eslint-with-prettier && cp -r vue-project/. . && rm -rf vue-project && npm install",
+    "postAttachCommand": "npm run dev"
+}
