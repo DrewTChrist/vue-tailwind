@@ -66,17 +66,20 @@ onBeforeUnmount(() => {
         </button>
         <DarkModeToggler v-model:darkMode="darkMode" />
       </div>
-      <div
-        :class="{ hidden: !showDropdown }"
-        class="w-full md:block md:hidden md:w-auto"
-        id="navbar-default"
-      >
-        <ul
-          class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900"
+      <Transition>
+        <div
+          v-if="showDropdown"
+          :class="{ hidden: !showDropdown }"
+          class="absolute left-0 right-0 top-12 z-10 w-full p-2 md:block md:hidden md:w-auto"
+          id="navbar-default"
         >
-          <slot name="links" :toggleDropdown="toggleDropdown" />
-        </ul>
-      </div>
+          <ul
+            class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900"
+          >
+            <slot name="links" :toggleDropdown="toggleDropdown" />
+          </ul>
+        </div>
+      </Transition>
       <div class="md:show hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
           class="mt-4 flex flex-col items-center rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900"
@@ -88,3 +91,15 @@ onBeforeUnmount(() => {
     </div>
   </nav>
 </template>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
