@@ -12,6 +12,7 @@ function toggleDarkMode() {
       @click="toggleDarkMode"
       :class="{ hidden: darkMode }"
       type="button"
+      aria-label="Theme"
       class="block rounded-full font-medium text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
     >
       <span
