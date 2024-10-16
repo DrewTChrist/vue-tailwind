@@ -34,8 +34,8 @@ onBeforeUnmount(() => {
     >
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img
-          src="https://placehold.co/200x200"
-          class="h-8"
+          src="https://placehold.co/200x200?text=logo"
+          class="h-8 rounded-full"
           alt="Website Logo"
         />
         <span

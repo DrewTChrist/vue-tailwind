@@ -8,7 +8,11 @@
           href="#"
           class="mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse"
         >
-          <img src="https://placehold.co/200x200" class="h-8" alt="Logo" />
+          <img
+            src="https://placehold.co/200x200?text=logo"
+            class="h-8 rounded-full"
+            alt="Logo"
+          />
           <span
             class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white"
             >Website</span
