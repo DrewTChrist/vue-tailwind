@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <footer class="bg-white dark:bg-gray-900">
+  <footer class="bg-white transition duration-300 dark:bg-gray-900">
     <div class="mx-auto w-full max-w-screen-xl p-4 md:py-8">
       <div class="sm:flex sm:items-center sm:justify-between">
         <a

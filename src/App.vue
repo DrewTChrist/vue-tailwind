@@ -50,7 +50,12 @@ import NavbarLink from './components/NavbarComponent/NavbarLink.vue'
       </Navbar>
     </div>
   </header>
-  <RouterView />
+  <suspense>
+    <template #default>
+      <RouterView />
+    </template>
+    <template #fallback> Loading.. </template>
+  </suspense>
   <Footer />
 </template>
 

@@ -25,7 +25,9 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <nav class="border-gray-200 bg-white dark:bg-gray-900">
+  <nav
+    class="border-gray-200 bg-white transition duration-300 dark:bg-gray-900"
+  >
     <div
       ref="dropdown"
       class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
@@ -77,7 +79,7 @@ onBeforeUnmount(() => {
           id="navbar-default"
         >
           <ul
-            class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900"
+            class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium transition duration-300 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900"
           >
             <slot name="links" :toggleDropdown="toggleDropdown" />
           </ul>
@@ -85,7 +87,7 @@ onBeforeUnmount(() => {
       </Transition>
       <div class="md:show hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
-          class="mt-4 flex flex-col items-center rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900"
+          class="mt-4 flex flex-col items-center rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium transition duration-300 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900"
         >
           <slot name="links" />
           <li><DarkModeToggler v-model:darkMode="darkMode" /></li>
