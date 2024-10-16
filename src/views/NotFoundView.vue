@@ -1,6 +1,6 @@
 <template>
   <main
-    class="grid min-h-full place-items-center bg-white px-6 py-24 transition duration-300 sm:py-32 lg:px-8 dark:bg-gray-900"
+    class="grid min-h-screen place-items-center bg-white px-6 py-24 transition duration-300 sm:py-32 lg:px-8 dark:bg-gray-900"
   >
     <div class="text-center">
       <p class="text-4xl font-semibold text-blue-600">404</p>
