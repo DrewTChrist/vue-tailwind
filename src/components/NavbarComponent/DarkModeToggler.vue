@@ -57,6 +57,7 @@ onMounted(() => {
       @click="toggleDarkMode"
       :class="{ hidden: !darkMode }"
       type="button"
+      aria-label="Theme"
       class="block rounded-full font-medium text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none dark:text-neutral-200 dark:hover:bg-gray-700 dark:focus:bg-gray-700"
     >
       <span
