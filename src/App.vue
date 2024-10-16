@@ -1,6 +1,7 @@
 <script setup>
 import FlyoutMenu from './components/FlyoutMenu/FlyoutMenu.vue'
 import FlyoutMenuItem from './components/FlyoutMenu/FlyoutMenuItem.vue'
+import Footer from './components/FooterComponent.vue'
 import Navbar from './components/NavbarComponent/NavbarComponent.vue'
 import NavbarLink from './components/NavbarComponent/NavbarLink.vue'
 </script>
@@ -50,6 +51,7 @@ import NavbarLink from './components/NavbarComponent/NavbarLink.vue'
     </div>
   </header>
   <RouterView />
+  <Footer />
 </template>
 
 <style scoped></style>

@@ -31,6 +31,11 @@ onBeforeUnmount(() => {
       class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
     >
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img
+          src="https://placehold.co/200x200"
+          class="h-8"
+          alt="Website Logo"
+        />
         <span
           class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white"
           >Website</span
