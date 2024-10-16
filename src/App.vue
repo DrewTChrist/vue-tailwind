@@ -24,7 +24,7 @@ import NavbarLink from './components/NavbarComponent/NavbarLink.vue'
             >
               <template #icon>
                 <svg
-                  class="size-6 h-6 w-6 text-gray-600 dark:text-white group-hover:text-indigo-600"
+                  class="size-6 h-6 w-6 text-gray-600 group-hover:text-indigo-600 dark:text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"

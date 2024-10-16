@@ -57,7 +57,7 @@ onMounted(() => {
       @click="toggleDarkMode"
       :class="{ hidden: !darkMode }"
       type="button"
-      class="block rounded-full font-medium text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+      class="block rounded-full font-medium text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none dark:text-neutral-200 dark:hover:bg-gray-700 dark:focus:bg-gray-700"
     >
       <span
         class="group inline-flex size-9 shrink-0 items-center justify-center"

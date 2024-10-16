@@ -8,11 +8,7 @@
           href="#"
           class="mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse"
         >
-          <img
-            src="https://placehold.co/200x200"
-            class="h-8"
-            alt="Logo"
-          />
+          <img src="https://placehold.co/200x200" class="h-8" alt="Logo" />
           <span
             class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white"
             >Website</span
@@ -40,9 +36,8 @@
       />
       <span
         class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
-        >© 2023
-        <a href="#" class="hover:underline">Website</a>.
-        All Rights Reserved.</span
+        >© 2023 <a href="#" class="hover:underline">Website</a>. All Rights
+        Reserved.</span
       >
     </div>
   </footer>

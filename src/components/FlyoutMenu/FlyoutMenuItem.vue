@@ -3,9 +3,11 @@ const props = defineProps(['title', 'description'])
 </script>
 
 <template>
-  <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700">
+  <div
+    class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700"
+  >
     <div
-      class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg dark:bg-gray-500 dark:group-hover:bg-gray-400 group-hover:bg-white"
+      class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover:bg-white dark:bg-gray-500 dark:group-hover:bg-gray-400"
     >
       <slot name="icon" />
     </div>
