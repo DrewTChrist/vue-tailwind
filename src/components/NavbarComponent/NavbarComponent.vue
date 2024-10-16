@@ -2,8 +2,6 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import DarkModeToggler from './DarkModeToggler.vue'
 
-const darkMode = defineModel('darkMode')
-
 const showDropdown = ref(false)
 const dropdown = ref(null)
 

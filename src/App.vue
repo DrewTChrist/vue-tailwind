@@ -1,17 +1,14 @@
 <script setup>
-import { ref } from 'vue'
 import FlyoutMenu from './components/FlyoutMenu/FlyoutMenu.vue'
 import FlyoutMenuItem from './components/FlyoutMenu/FlyoutMenuItem.vue'
 import Navbar from './components/NavbarComponent/NavbarComponent.vue'
 import NavbarLink from './components/NavbarComponent/NavbarLink.vue'
-
-const darkMode = ref(false)
 </script>
 
 <template>
   <header>
-    <div :class="{ dark: darkMode }" class="wrapper">
-      <Navbar v-model:darkMode="darkMode">
+    <div class="wrapper">
+      <Navbar>
         <template #links="{ toggleDropdown }">
           <NavbarLink
             :toggle="toggleDropdown"
@@ -26,7 +23,7 @@ const darkMode = ref(false)
             >
               <template #icon>
                 <svg
-                  class="size-6 h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                  class="size-6 h-6 w-6 text-gray-600 dark:text-white group-hover:text-indigo-600"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"

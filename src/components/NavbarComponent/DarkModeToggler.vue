@@ -1,9 +1,28 @@
 <script setup>
-const darkMode = defineModel('darkMode')
+import { ref, onMounted } from 'vue'
+
+const darkMode = ref(false)
 
 function toggleDarkMode() {
   darkMode.value = !darkMode.value
+  localStorage.setItem('darkMode', darkMode.value)
+  if (darkMode.value) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
 }
+
+onMounted(() => {
+  if (localStorage.getItem('darkMode') != null) {
+    darkMode.value = localStorage.getItem('darkMode') == 'true'
+    if (darkMode.value) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
+})
 </script>
 
 <template>

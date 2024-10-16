@@ -54,15 +54,15 @@ onBeforeUnmount(() => {
           class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4"
         >
           <div
-            class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5"
+            class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-900/5 dark:bg-gray-800"
           >
             <div class="p-4">
               <slot />
             </div>
-            <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+            <div class="grid grid-cols-2 divide-x divide-gray-900/5 dark:divide-gray-950/5 bg-gray-50">
               <a
                 href="#"
-                class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100"
+                class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
               >
                 <svg
                   class="h-5 w-5 flex-none text-gray-400"
@@ -81,7 +81,7 @@ onBeforeUnmount(() => {
               </a>
               <a
                 href="#"
-                class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100"
+                class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
               >
                 <svg
                   class="h-5 w-5 flex-none text-gray-400"
