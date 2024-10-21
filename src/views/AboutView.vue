@@ -1,5 +1,9 @@
+<script setup>
+import BaseView from './BaseView.vue'
+</script>
+
 <template>
-  <div class="min-h-screen p-4 transition duration-300 dark:bg-gray-900">
+  <BaseView>
     <div class="relative isolate px-6 pt-14 lg:px-8">
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="text-center">
@@ -16,5 +20,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </BaseView>
 </template>
