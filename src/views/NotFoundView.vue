@@ -1,4 +1,5 @@
 <script setup>
+import BaseButton from '@/components/BaseComponents/BaseButton.vue'
 import BaseView from './BaseView.vue'
 </script>
 
@@ -16,11 +17,7 @@ import BaseView from './BaseView.vue'
           Sorry, we couldn’t find the page you’re looking for.
         </p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a
-            href="#"
-            class="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition duration-150 hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-            >Go back home</a
-          >
+          <BaseButton value="Go back home" />
         </div>
       </div>
     </div>
