@@ -1,5 +1,18 @@
 <script setup>
-const props = defineProps(['title', 'description'])
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  routerLinkPath: {
+    type: String,
+    required: true,
+  },
+})
 </script>
 
 <template>
@@ -11,14 +24,14 @@ const props = defineProps(['title', 'description'])
     >
       <slot name="icon" />
     </div>
-    <div>
+    <RouterLink :to="routerLinkPath">
       <a href="#" class="font-semibold text-gray-900 dark:text-white">
-        {{ props.title }}
+        {{ title }}
         <span class="absolute inset-0"></span>
       </a>
       <p class="mt-1 text-gray-600 dark:text-gray-400">
-        {{ props.description }}
+        {{ description }}
       </p>
-    </div>
+    </RouterLink>
   </div>
 </template>

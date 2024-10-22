@@ -2,16 +2,24 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
-const props = defineProps([
-  'collapsedLink',
-  'toggle',
-  'linkText',
-  'routeName',
-  'path',
-])
+const props = defineProps({
+  toggle: {
+    type: Function,
+    required: false,
+  },
+  linkText: {
+    type: String,
+    required: true,
+  },
+  path: {
+    type: String,
+    required: true,
+  },
+})
+
 const route = useRoute()
 
-const isRoute = computed(() => route.name == props.routeName)
+const isRoute = computed(() => route.path == props.path)
 
 const linkStyle = computed(() => {
   return {
@@ -28,12 +36,12 @@ const linkStyle = computed(() => {
 <template>
   <li>
     <RouterLink
-      @click="props.toggle"
+      @click="toggle"
       :class="linkStyle"
       class="block rounded px-3 py-2 text-gray-900 md:bg-transparent md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:text-blue-500"
-      :to="props.path"
+      :to="path"
       aria-current="page"
-      >{{ props.linkText }}</RouterLink
+      >{{ linkText }}</RouterLink
     >
   </li>
 </template>

@@ -11,16 +11,12 @@ import NavbarLink from './components/NavbarComponent/NavbarLink.vue'
     <div class="wrapper">
       <Navbar>
         <template #links="{ toggleDropdown }">
-          <NavbarLink
-            :toggle="toggleDropdown"
-            linkText="Home"
-            routeName="home"
-            path="/"
-          />
+          <NavbarLink :toggle="toggleDropdown" linkText="Home" path="/" />
           <FlyoutMenu>
             <FlyoutMenuItem
               title="Integrations"
               description="Integrate your technologies and data"
+              routerLinkPath="/integrations"
             >
               <template #icon>
                 <svg
@@ -40,12 +36,7 @@ import NavbarLink from './components/NavbarComponent/NavbarLink.vue'
               </template>
             </FlyoutMenuItem>
           </FlyoutMenu>
-          <NavbarLink
-            :toggle="toggleDropdown"
-            linkText="About"
-            routeName="about"
-            path="/about"
-          />
+          <NavbarLink :toggle="toggleDropdown" linkText="About" path="/about" />
         </template>
       </Navbar>
     </div>
