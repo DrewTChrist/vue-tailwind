@@ -1,6 +1,9 @@
 <script setup>
 import BaseButton from '@/components/BaseComponents/BaseButton.vue'
 import BaseView from './BaseView.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 </script>
 
 <template>
@@ -151,7 +154,10 @@ import BaseView from './BaseView.vue'
           </dl>
         </div>
         <div class="mt-16 flex justify-center">
-          <BaseButton value="See demo portal" />
+          <BaseButton
+            @click="router.push('demo-portal')"
+            value="See demo portal"
+          />
         </div>
       </div>
     </div>
