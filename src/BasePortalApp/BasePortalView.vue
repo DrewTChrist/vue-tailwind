@@ -74,8 +74,8 @@ onMounted(() => {
             <li class="mb-2 mt-2">
               <RouterLink
                 :to="`${basePath}/dashboard`"
+                activeClass="bg-blue-700"
                 :class="{
-                  'bg-blue-700': route.path == `${basePath}/dashboard`,
                   'dark:hover:bg-gray-700':
                     route.path != `${basePath}/dashboard`,
                 }"
@@ -99,8 +99,8 @@ onMounted(() => {
             <li class="mb-2">
               <RouterLink
                 :to="`${basePath}/reporting`"
+                activeClass="bg-blue-700"
                 :class="{
-                  'bg-blue-700': route.path == `${basePath}/reporting`,
                   'dark:hover:bg-gray-700':
                     route.path != `${basePath}/reporting`,
                 }"
@@ -126,8 +126,8 @@ onMounted(() => {
             <li class="mb-2">
               <RouterLink
                 :to="`${basePath}/configuration`"
+                activeClass="bg-blue-700"
                 :class="{
-                  'bg-blue-700': route.path == `${basePath}/configuration`,
                   'dark:hover:bg-gray-700':
                     route.path != `${basePath}/configuration`,
                 }"
