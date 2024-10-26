@@ -1,10 +1,5 @@
 <script setup>
-import { onMounted } from 'vue'
 import BasePortalDashboardView from '@/BasePortalApp/BasePortalDashboardView.vue'
-
-onMounted(() => {
-  console.log('DemoPortalDashboardView Mounted')
-})
 </script>
 
 <template>

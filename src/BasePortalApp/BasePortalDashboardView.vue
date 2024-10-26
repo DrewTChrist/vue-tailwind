@@ -1,10 +1,4 @@
-<script setup>
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  console.log('BasePortalDashboardView Mounted')
-})
-</script>
+<script setup></script>
 
 <template>
   <div class="divide-y dark:divide-gray-700">

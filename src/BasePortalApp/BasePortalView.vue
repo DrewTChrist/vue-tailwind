@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import BasePortalTopBar from '@/BasePortalApp/components/BasePortalTopBar.vue'
 import BasePortalSideMenu from '@/BasePortalApp/components/BasePortalSideMenu.vue'
 
@@ -19,10 +19,6 @@ const showMenu = ref(true)
 function toggleMenu() {
   showMenu.value = !showMenu.value
 }
-
-onMounted(() => {
-  console.log('BasePortalView Mounted')
-})
 </script>
 
 <template>

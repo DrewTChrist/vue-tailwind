@@ -3,8 +3,8 @@ defineModel('toggle')
 defineProps({
   title: {
     type: String,
-    required: false
-  }
+    required: false,
+  },
 })
 </script>
 

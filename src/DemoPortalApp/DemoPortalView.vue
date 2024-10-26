@@ -5,7 +5,6 @@ import { createDemoPortalApp } from '@/main'
 const demoPortalApp = createDemoPortalApp()
 
 onMounted(() => {
-  console.log('DemoPortalView Mounted')
   demoPortalApp.mount('#demoPortalApp')
 })
 
