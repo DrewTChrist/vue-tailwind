@@ -1,6 +1,17 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+
+defineProps({
+  title: {
+    type: String,
+    required: false,
+  },
+  basePath: {
+    type: String,
+    required: true,
+  },
+})
 
 const route = useRoute()
 
@@ -9,13 +20,20 @@ const showMenu = ref(true)
 function toggleMenu() {
   showMenu.value = !showMenu.value
 }
+
+onMounted(() => {
+  console.log('BasePortalView Mounted')
+})
 </script>
 
 <template>
   <div
     class="min-h-screen w-full bg-gray-300 bg-white transition duration-300 dark:bg-gray-900"
   >
-    <div id="basePortalBar" class="w-full bg-gray-600 p-4">
+    <div
+      id="basePortalBar"
+      class="flex w-full items-center space-x-4 bg-gray-600 p-4 text-2xl font-semibold text-white"
+    >
       <button
         @click="toggleMenu"
         data-collapse-toggle="navbar-default"
@@ -41,6 +59,7 @@ function toggleMenu() {
           />
         </svg>
       </button>
+      <p>{{ title }}</p>
     </div>
     <div class="flex min-h-screen flex-col md:flex-row">
       <Transition>
@@ -54,11 +73,11 @@ function toggleMenu() {
           >
             <li class="mb-2 mt-2">
               <RouterLink
-                to="/demo-portal/dashboard"
+                :to="`${basePath}/dashboard`"
                 :class="{
-                  'bg-blue-700': route.path == '/demo-portal/dashboard',
+                  'bg-blue-700': route.path == `${basePath}/dashboard`,
                   'dark:hover:bg-gray-700':
-                    route.path != '/demo-portal/dashboard',
+                    route.path != `${basePath}/dashboard`,
                 }"
                 class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
               >
@@ -79,11 +98,11 @@ function toggleMenu() {
             </li>
             <li class="mb-2">
               <RouterLink
-                to="/demo-portal/reporting"
+                :to="`${basePath}/reporting`"
                 :class="{
-                  'bg-blue-700': route.path == '/demo-portal/reporting',
+                  'bg-blue-700': route.path == `${basePath}/reporting`,
                   'dark:hover:bg-gray-700':
-                    route.path != '/demo-portal/reporting',
+                    route.path != `${basePath}/reporting`,
                 }"
                 class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
                 ><svg
@@ -106,11 +125,11 @@ function toggleMenu() {
             </li>
             <li class="mb-2">
               <RouterLink
-                to="/demo-portal/configuration"
+                :to="`${basePath}/configuration`"
                 :class="{
-                  'bg-blue-700': route.path == '/demo-portal/configuration',
+                  'bg-blue-700': route.path == `${basePath}/configuration`,
                   'dark:hover:bg-gray-700':
-                    route.path != '/demo-portal/configuration',
+                    route.path != `${basePath}/configuration`,
                 }"
                 class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
               >
@@ -135,7 +154,7 @@ function toggleMenu() {
       <div
         class="mx-2 mt-2 grow rounded-lg border border-gray-100 bg-gray-50 text-lg font-semibold dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
       >
-        <RouterView />
+        <RouterView name="portalContent" />
       </div>
     </div>
   </div>

@@ -155,7 +155,7 @@ const router = useRouter()
         </div>
         <div class="mt-16 flex justify-center">
           <BaseButton
-            @click="router.push('demo-portal')"
+            @click="router.push({ name: 'demo-portal' })"
             value="See demo portal"
           />
         </div>

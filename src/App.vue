@@ -4,6 +4,7 @@ import FlyoutMenuItem from './components/FlyoutMenu/FlyoutMenuItem.vue'
 import Footer from './components/FooterComponent.vue'
 import Navbar from './components/NavbarComponent/NavbarComponent.vue'
 import NavbarLink from './components/NavbarComponent/NavbarLink.vue'
+import BaseView from './views/BaseView.vue'
 </script>
 
 <template>
@@ -41,7 +42,8 @@ import NavbarLink from './components/NavbarComponent/NavbarLink.vue'
       </Navbar>
     </div>
   </header>
-  <RouterView />
+  <RouterView v-if="$route.matched.length > 0" />
+  <BaseView v-else></BaseView>
   <Footer />
 </template>
 

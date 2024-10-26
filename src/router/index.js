@@ -1,18 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import IntegrationsView from '@/views/IntegrationsView.vue'
-import DemoPortalView from '@/views/DemoPortalView/DemoPortalView.vue'
-import BasePortalDashboardView from '@/views/BasePortalView/BasePortalDashboardView.vue'
-import BasePortalReportingView from '@/views/BasePortalView/BasePortalReportingView.vue'
-import BasePortalConfigurationView from '@/views/BasePortalView/BasePortalConfigurationView.vue'
-import AboutView from '@/views/AboutView.vue'
-import NotFoundView from '@/views/NotFoundView.vue'
+import BasePortalConfigurationView from '@/BasePortalApp/BasePortalConfigurationView.vue'
+import BasePortalDashboardView from '@/BasePortalApp/BasePortalDashboardView.vue'
+import BasePortalReportingView from '@/BasePortalApp/BasePortalReportingView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior(to, from) {
     if (
-      to.path == '/demo-portal/dashboard' && !from.path.includes('/demo-portal')
+      (to.name.includes('demo') && !from.name.includes('demo')) ||
+      (to.name.includes('live') && !from.name.includes('live'))
     ) {
       return { el: '#basePortalBar', top: 0 }
     }
@@ -21,42 +17,85 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
-    },
-    {
-      path: '/demo-portal',
-      name: 'demo-portal',
-      component: DemoPortalView,
-      redirect: '/demo-portal/dashboard',
-      children: [
-        {
-          path: 'dashboard',
-          component: BasePortalDashboardView,
-        },
-        {
-          path: 'reporting',
-          component: BasePortalReportingView,
-        },
-        {
-          path: 'configuration',
-          component: BasePortalConfigurationView,
-        },
-      ],
+      component: () => import('@/views/HomeView.vue'),
     },
     {
       path: '/integrations',
       name: 'integrations',
-      component: IntegrationsView,
+      component: () => import('@/views/IntegrationsView.vue'),
+    },
+    {
+      path: '/demo',
+      name: 'demo-portal',
+      redirect: '/demo/dashboard',
+      children: [
+        {
+          path: 'dashboard',
+          name: 'demo-dashboard',
+          components: {
+            default: () => import('@/DemoPortalApp/DemoPortalView.vue'),
+            portalContent: () =>
+              import('@/DemoPortalApp/DemoPortalDashboardView.vue'),
+          },
+        },
+        {
+          path: 'reporting',
+          name: 'demo-reporting',
+          components: {
+            default: () => import('@/DemoPortalApp/DemoPortalView.vue'),
+            portalContent: BasePortalReportingView,
+          },
+        },
+        {
+          path: 'configuration',
+          name: 'demo-configuration',
+          components: {
+            default: () => import('@/DemoPortalApp/DemoPortalView.vue'),
+            portalContent: BasePortalConfigurationView,
+          },
+        },
+      ],
+    },
+    {
+      path: '/portal',
+      name: 'portal',
+      redirect: '/portal/dashboard',
+      children: [
+        {
+          path: 'dashboard',
+          name: 'live-dashboard',
+          components: {
+            default: () => import('@/LivePortalApp/LivePortalView.vue'),
+            portalContent: BasePortalDashboardView,
+          },
+        },
+        {
+          path: 'reporting',
+          name: 'live-reporting',
+          components: {
+            default: () => import('@/LivePortalApp/LivePortalView.vue'),
+            portalContent: BasePortalReportingView,
+          },
+        },
+        {
+          path: 'configuration',
+          name: 'live-configuration',
+          components: {
+            default: () => import('@/LivePortalApp/LivePortalView.vue'),
+            portalContent: BasePortalConfigurationView,
+          },
+        },
+      ],
     },
     {
       path: '/about',
       name: 'about',
-      component: AboutView,
+      component: () => import('@/views/AboutView.vue'),
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
-      component: NotFoundView,
+      component: () => import('@/views/NotFoundView.vue'),
     },
   ],
 })
