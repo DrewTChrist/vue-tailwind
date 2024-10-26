@@ -43,7 +43,8 @@ const router = createRouter({
           name: 'demo-reporting',
           components: {
             default: () => import('@/DemoPortalApp/DemoPortalView.vue'),
-            portalContent: BasePortalReportingView,
+            portalContent: () =>
+              import('@/DemoPortalApp/DemoPortalReportingView.vue'),
           },
         },
         {

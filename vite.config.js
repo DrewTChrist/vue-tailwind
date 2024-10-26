@@ -12,7 +12,8 @@ export default defineConfig({
         manualChunks: {
           'group-demo-portal': [
             './src/DemoPortalApp/DemoPortalView.vue',
-            './src/DemoPortalApp/DemoPortalDashboardView.vue'
+            './src/DemoPortalApp/DemoPortalDashboardView.vue',
+            './src/DemoPortalApp/DemoPortalReportingView.vue'
           ],
           'group-live-portal': [
             './src/LivePortalApp/LivePortalView.vue'

@@ -9,6 +9,6 @@
         Reporting
       </h2>
     </div>
-    <div class="p-4">Content</div>
+    <slot name="content" />
   </div>
 </template>
