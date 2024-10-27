@@ -39,6 +39,15 @@ const router = createRouter({
           },
         },
         {
+          path: 'integrations',
+          name: 'demo-integrations',
+          components: {
+            default: () => import('@/DemoPortalApp/DemoPortalView.vue'),
+            portalContent: () =>
+              import('@/DemoPortalApp/DemoPortalIntegrationsView.vue'),
+          },
+        },
+        {
           path: 'reporting',
           name: 'demo-reporting',
           components: {

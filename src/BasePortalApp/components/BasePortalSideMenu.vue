@@ -47,6 +47,34 @@ const route = useRoute()
             <p>Dashboard</p></RouterLink
           >
         </li>
+        <li class="mb-2 mt-2">
+          <RouterLink
+            :to="`${basePath}/integrations`"
+            activeClass="bg-blue-700"
+            :class="{
+              'dark:hover:bg-gray-700':
+                route.path != `${basePath}/integrations`,
+            }"
+            class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6"
+            >
+              <path
+                d="M5.507 4.048A3 3 0 0 1 7.785 3h8.43a3 3 0 0 1 2.278 1.048l1.722 2.008A4.533 4.533 0 0 0 19.5 6h-15c-.243 0-.482.02-.715.056l1.722-2.008Z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M1.5 10.5a3 3 0 0 1 3-3h15a3 3 0 1 1 0 6h-15a3 3 0 0 1-3-3Zm15 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm2.25.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM4.5 15a3 3 0 1 0 0 6h15a3 3 0 1 0 0-6h-15Zm11.25 3.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM19.5 18a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <p>Integrations</p></RouterLink
+          >
+        </li>
         <li class="mb-2">
           <RouterLink
             :to="`${basePath}/reporting`"
