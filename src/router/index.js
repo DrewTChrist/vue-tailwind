@@ -70,7 +70,7 @@ const router = createRouter({
     {
       path: '/portal/login',
       name: 'live-login',
-      component: import('@/LivePortalApp/LivePortalLoginView.vue'),
+      component: () => import('@/LivePortalApp/LivePortalLoginView.vue'),
     },
     {
       path: '/portal/:id',
