@@ -16,6 +16,7 @@ export default defineConfig({
             './src/DemoPortalApp/DemoPortalReportingView.vue'
           ],
           'group-live-portal': [
+            './src/LivePortalApp/LivePortalLoginView.vue',
             './src/LivePortalApp/LivePortalView.vue'
           ]
         }

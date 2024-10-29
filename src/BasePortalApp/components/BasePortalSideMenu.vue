@@ -25,7 +25,7 @@ const route = useRoute()
       >
         <li class="mb-2 mt-2">
           <RouterLink
-            :to="`${basePath}/dashboard`"
+            :to="{ name: `${basePath}-dashboard` }"
             activeClass="bg-blue-700"
             :class="{
               'dark:hover:bg-gray-700': route.path != `${basePath}/dashboard`,
@@ -47,9 +47,9 @@ const route = useRoute()
             <p>Dashboard</p></RouterLink
           >
         </li>
-        <li class="mb-2 mt-2">
+        <!-- <li class="mb-2 mt-2">
           <RouterLink
-            :to="`${basePath}/integrations`"
+            :to="{ name: `${basePath}-integrations`}"
             activeClass="bg-blue-700"
             :class="{
               'dark:hover:bg-gray-700':
@@ -74,10 +74,10 @@ const route = useRoute()
             </svg>
             <p>Integrations</p></RouterLink
           >
-        </li>
+        </li> -->
         <li class="mb-2">
           <RouterLink
-            :to="`${basePath}/reporting`"
+            :to="{ name: `${basePath}-reporting` }"
             activeClass="bg-blue-700"
             :class="{
               'dark:hover:bg-gray-700': route.path != `${basePath}/reporting`,
@@ -103,7 +103,7 @@ const route = useRoute()
         </li>
         <li class="mb-2">
           <RouterLink
-            :to="`${basePath}/configuration`"
+            :to="{ name: `${basePath}-configuration` }"
             activeClass="bg-blue-700"
             :class="{
               'dark:hover:bg-gray-700':

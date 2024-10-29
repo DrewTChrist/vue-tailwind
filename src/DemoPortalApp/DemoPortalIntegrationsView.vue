@@ -1,31 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { useDemoStore } from '@/stores/demoStore'
 import BaseButton from '@/components/BaseComponents/BaseButton.vue'
 import BasePortalIntegrationsView from '@/BasePortalApp/BasePortalIntegrationsView.vue'
 
-const integrations = ref([
-  {
-    id: 0,
-    name: 'ERP to CRM',
-    connector: 'JDBC',
-    lastTransaction: '3h ago',
-    status: true,
-  },
-  {
-    id: 1,
-    name: 'CRM to ERP',
-    connector: 'JDBC',
-    lastTransaction: '3h ago',
-    status: true,
-  },
-  {
-    id: 2,
-    name: 'ERP to CRM',
-    connector: 'JDBC',
-    lastTransaction: '1h ago',
-    status: false,
-  },
-])
+const demoStore = useDemoStore()
 </script>
 
 <template>
@@ -35,10 +13,10 @@ const integrations = ref([
         <div class="mr-4 mt-4 flex flex-row justify-end">
           <BaseButton value="New Integration" />
         </div>
-        <div class="no-scrollbar m-4 h-screen overflow-y-auto">
+        <div class="no-scrollbar mx-4 h-screen overflow-y-auto">
           <ul role="list">
             <li
-              v-for="integration in integrations"
+              v-for="integration in demoStore.integrations"
               :key="integration.id"
               class="mt-4 rounded-md border border-gray-700 px-2 hover:bg-gray-600"
             >
