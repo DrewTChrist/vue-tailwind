@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import BasePortalConfigurationView from '@/BasePortalApp/BasePortalConfigurationView.vue'
 import BasePortalDashboardView from '@/BasePortalApp/BasePortalDashboardView.vue'
+import BasePortalIntegrationsView from '@/BasePortalApp/BasePortalIntegrationsView.vue'
 import BasePortalReportingView from '@/BasePortalApp/BasePortalReportingView.vue'
-import LivePortalLoginView from '@/LivePortalApp/LivePortalLoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -70,7 +70,7 @@ const router = createRouter({
     {
       path: '/portal/login',
       name: 'live-login',
-      component: LivePortalLoginView,
+      component: import('@/LivePortalApp/LivePortalLoginView.vue'),
     },
     {
       path: '/portal/:id',
@@ -83,6 +83,14 @@ const router = createRouter({
           components: {
             default: () => import('@/LivePortalApp/LivePortalView.vue'),
             portalContent: BasePortalDashboardView,
+          },
+        },
+        {
+          path: 'integrations',
+          name: 'live-integrations',
+          components: {
+            default: () => import('@/LivePortalApp/LivePortalView.vue'),
+            portalContent: BasePortalIntegrationsView,
           },
         },
         {

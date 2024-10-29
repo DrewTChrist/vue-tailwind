@@ -13,6 +13,7 @@ export default defineConfig({
           'group-demo-portal': [
             './src/DemoPortalApp/DemoPortalView.vue',
             './src/DemoPortalApp/DemoPortalDashboardView.vue',
+            './src/DemoPortalApp/DemoPortalIntegrationsView.vue',
             './src/DemoPortalApp/DemoPortalReportingView.vue'
           ],
           'group-live-portal': [
