@@ -1,8 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import BasePortalConfigurationView from '@/BasePortalApp/BasePortalConfigurationView.vue'
-// import BasePortalDashboardView from '@/BasePortalApp/BasePortalDashboardView.vue'
-// import BasePortalIntegrationsView from '@/BasePortalApp/BasePortalIntegrationsView.vue'
-// import BasePortalReportingView from '@/BasePortalApp/BasePortalReportingView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

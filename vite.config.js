@@ -18,6 +18,7 @@ export default defineConfig({
             './src/components/NavbarComponent/NavbarComponent.vue',
             './src/components/NavbarComponent/NavbarLink.vue',
             './src/components/FooterComponent.vue',
+            './src/views/BaseView.vue'
           ],
           'group-demo-portal': [
             './src/DemoPortalApp/DemoPortalView.vue',
