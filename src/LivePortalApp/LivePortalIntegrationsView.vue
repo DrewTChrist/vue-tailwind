@@ -4,8 +4,6 @@ import BasePortalIntegrationsView from '@/BasePortalApp/BasePortalIntegrationsVi
 
 <template>
   <BasePortalIntegrationsView>
-    <template v-slot:content>
-      Live Portal Integrations
-    </template>
+    <template v-slot:content> Live Portal Integrations </template>
   </BasePortalIntegrationsView>
 </template>

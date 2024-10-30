@@ -4,8 +4,6 @@ import BasePortalConfigurationView from '@/BasePortalApp/BasePortalConfiguration
 
 <template>
   <BasePortalConfigurationView>
-    <template v-slot:content>
-      Demo Portal Configuration
-    </template>
+    <template v-slot:content> Demo Portal Configuration </template>
   </BasePortalConfigurationView>
 </template>

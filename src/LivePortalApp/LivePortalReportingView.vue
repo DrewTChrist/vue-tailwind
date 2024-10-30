@@ -4,8 +4,6 @@ import BasePortalReportingView from '@/BasePortalApp/BasePortalReportingView.vue
 
 <template>
   <BasePortalReportingView>
-    <template v-slot:content>
-      Live Portal Reporting
-    </template>
+    <template v-slot:content> Live Portal Reporting </template>
   </BasePortalReportingView>
 </template>

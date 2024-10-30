@@ -10,7 +10,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'group-components': [
+          'components': [
             './src/components/BaseComponents/BaseButton.vue',
             './src/components/FlyoutMenu/FlyoutMenu.vue',
             './src/components/FlyoutMenu/FlyoutMenuItem.vue',
@@ -20,21 +20,13 @@ export default defineConfig({
             './src/components/FooterComponent.vue',
             './src/views/BaseView.vue'
           ],
-          'group-demo-portal': [
-            './src/DemoPortalApp/DemoPortalView.vue',
-            './src/DemoPortalApp/DemoPortalConfigurationView.vue',
-            './src/DemoPortalApp/DemoPortalDashboardView.vue',
-            './src/DemoPortalApp/DemoPortalIntegrationsView.vue',
-            './src/DemoPortalApp/DemoPortalReportingView.vue'
+          'base-portal': [
+            './src/BasePortalApp/BasePortalView.vue',
+            './src/BasePortalApp/BasePortalConfigurationView.vue',
+            './src/BasePortalApp/BasePortalDashboardView.vue',
+            './src/BasePortalApp/BasePortalIntegrationsView.vue',
+            './src/BasePortalApp/BasePortalReportingView.vue'
           ],
-          'group-live-portal': [
-            './src/LivePortalApp/LivePortalView.vue',
-            './src/LivePortalApp/LivePortalLoginView.vue',
-            './src/LivePortalApp/LivePortalConfigurationView.vue',
-            './src/LivePortalApp/LivePortalDashboardView.vue',
-            './src/LivePortalApp/LivePortalIntegrationsView.vue',
-            './src/LivePortalApp/LivePortalReportingView.vue'
-          ]
         }
       }
     }

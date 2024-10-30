@@ -1,6 +1,13 @@
 <script setup>
-import { onMounted, onBeforeUnmount } from 'vue'
-import { createLivePortalApp } from '@/main'
+import { createApp, onMounted, onBeforeUnmount } from 'vue'
+import LivePortalApp from '@/LivePortalApp/App.vue'
+import { livePinia } from '@/main'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const createLivePortalApp = () =>
+  createApp(LivePortalApp).use(livePinia).use(router)
 
 const livePortalApp = createLivePortalApp()
 

@@ -79,7 +79,8 @@ const router = createRouter({
           name: 'live-dashboard',
           components: {
             default: () => import('@/LivePortalApp/LivePortalView.vue'),
-            portalContent: () => import('@/LivePortalApp/LivePortalDashboardView.vue'),
+            portalContent: () =>
+              import('@/LivePortalApp/LivePortalDashboardView.vue'),
           },
         },
         {
@@ -87,7 +88,8 @@ const router = createRouter({
           name: 'live-integrations',
           components: {
             default: () => import('@/LivePortalApp/LivePortalView.vue'),
-            portalContent: () => import('@/LivePortalApp/LivePortalIntegrationsView.vue'),
+            portalContent: () =>
+              import('@/LivePortalApp/LivePortalIntegrationsView.vue'),
           },
         },
         {
@@ -95,7 +97,8 @@ const router = createRouter({
           name: 'live-reporting',
           components: {
             default: () => import('@/LivePortalApp/LivePortalView.vue'),
-            portalContent: () => import('@/LivePortalApp/LivePortalReportingView.vue'),
+            portalContent: () =>
+              import('@/LivePortalApp/LivePortalReportingView.vue'),
           },
         },
         {
@@ -103,7 +106,8 @@ const router = createRouter({
           name: 'live-configuration',
           components: {
             default: () => import('@/LivePortalApp/LivePortalView.vue'),
-            portalContent: () => import('@/LivePortalApp/LivePortalConfigurationView.vue'),
+            portalContent: () =>
+              import('@/LivePortalApp/LivePortalConfigurationView.vue'),
           },
         },
       ],
