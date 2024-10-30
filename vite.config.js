@@ -10,6 +10,15 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+          'group-components': [
+            './src/components/BaseComponents/BaseButton.vue',
+            './src/components/FlyoutMenu/FlyoutMenu.vue',
+            './src/components/FlyoutMenu/FlyoutMenuItem.vue',
+            './src/components/NavbarComponent/DarkModeToggler.vue',
+            './src/components/NavbarComponent/NavbarComponent.vue',
+            './src/components/NavbarComponent/NavbarLink.vue',
+            './src/components/FooterComponent.vue',
+          ],
           'group-demo-portal': [
             './src/DemoPortalApp/DemoPortalView.vue',
             './src/DemoPortalApp/DemoPortalConfigurationView.vue',
