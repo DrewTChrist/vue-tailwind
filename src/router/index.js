@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import BasePortalConfigurationView from '@/BasePortalApp/BasePortalConfigurationView.vue'
-import BasePortalDashboardView from '@/BasePortalApp/BasePortalDashboardView.vue'
-import BasePortalIntegrationsView from '@/BasePortalApp/BasePortalIntegrationsView.vue'
-import BasePortalReportingView from '@/BasePortalApp/BasePortalReportingView.vue'
+// import BasePortalConfigurationView from '@/BasePortalApp/BasePortalConfigurationView.vue'
+// import BasePortalDashboardView from '@/BasePortalApp/BasePortalDashboardView.vue'
+// import BasePortalIntegrationsView from '@/BasePortalApp/BasePortalIntegrationsView.vue'
+// import BasePortalReportingView from '@/BasePortalApp/BasePortalReportingView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -83,7 +83,7 @@ const router = createRouter({
           name: 'live-dashboard',
           components: {
             default: () => import('@/LivePortalApp/LivePortalView.vue'),
-            portalContent: BasePortalDashboardView,
+            portalContent: () => import('@/LivePortalApp/LivePortalDashboardView.vue'),
           },
         },
         {
@@ -91,7 +91,7 @@ const router = createRouter({
           name: 'live-integrations',
           components: {
             default: () => import('@/LivePortalApp/LivePortalView.vue'),
-            portalContent: BasePortalIntegrationsView,
+            portalContent: () => import('@/LivePortalApp/LivePortalIntegrationsView.vue'),
           },
         },
         {
@@ -99,7 +99,7 @@ const router = createRouter({
           name: 'live-reporting',
           components: {
             default: () => import('@/LivePortalApp/LivePortalView.vue'),
-            portalContent: BasePortalReportingView,
+            portalContent: () => import('@/LivePortalApp/LivePortalReportingView.vue'),
           },
         },
         {
@@ -107,7 +107,7 @@ const router = createRouter({
           name: 'live-configuration',
           components: {
             default: () => import('@/LivePortalApp/LivePortalView.vue'),
-            portalContent: BasePortalConfigurationView,
+            portalContent: () => import('@/LivePortalApp/LivePortalConfigurationView.vue'),
           },
         },
       ],
