@@ -1,5 +1,6 @@
 <script setup>
 import BaseView from '@/views/BaseView.vue'
+import BaseButton from '@/components/BaseComponents/BaseButton.vue'
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useLiveStore } from '@/stores/liveStore'
@@ -9,6 +10,17 @@ const liveStore = useLiveStore()
 
 const email = ref('')
 const password = ref('')
+
+function handleSignin() {
+  goToDashboard()
+}
+
+function goToDashboard() {
+  router.push({
+    name: 'live-dashboard',
+    params: { id: liveStore.data.id },
+  })
+}
 
 onMounted(() => {
   liveStore.data.id = 0
@@ -84,18 +96,12 @@ onMounted(() => {
           </div>
 
           <div>
-            <button
-              @click="
-                router.push({
-                  name: 'live-dashboard',
-                  params: { id: liveStore.data.id },
-                })
-              "
-              type="submit"
-              class="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-            >
-              Sign in
-            </button>
+            <BaseButton
+              @click="handleSignin"
+              type="button"
+              value="Sign in"
+              class="w-full"
+            />
           </div>
         </form>
       </div>
