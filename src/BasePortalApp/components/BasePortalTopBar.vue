@@ -11,7 +11,7 @@ defineProps({
 <template>
   <div
     id="basePortalBar"
-    class="flex w-full items-center space-x-4 bg-gray-600 p-4 text-2xl font-semibold text-white"
+    class="flex w-full items-center space-x-4 bg-gray-300 p-4 text-2xl font-semibold text-gray-900 transition duration-300 dark:bg-gray-600 dark:text-white"
   >
     <button
       @click="toggle"

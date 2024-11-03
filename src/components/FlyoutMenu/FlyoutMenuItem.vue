@@ -17,7 +17,7 @@ defineProps({
 
 <template>
   <div
-    class="group relative flex gap-x-6 rounded-lg p-4 transition duration-150 hover:bg-gray-50 dark:hover:bg-gray-700"
+    class="group relative flex gap-x-6 rounded-lg p-4 transition duration-150 hover:bg-gray-200 dark:hover:bg-gray-700"
   >
     <div
       class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg transition duration-150 group-hover:bg-white dark:bg-gray-500 dark:group-hover:bg-gray-400"

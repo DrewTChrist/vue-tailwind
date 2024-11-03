@@ -4,8 +4,8 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior(to, from) {
     if (
-      (to.name.includes('demo') && !from.name.includes('demo')) ||
-      (to.name.includes('live') && !from.name.includes('live'))
+      (to.name == 'demo-dashboard' && from.name == 'integrations') ||
+      (to.name == 'live-dashboard' && from.name == 'live-login')
     ) {
       return { el: '#basePortalBar', top: 0 }
     }

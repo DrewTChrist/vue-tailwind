@@ -81,7 +81,7 @@ onBeforeUnmount(() => {
               </a> -->
               <a
                 href="#"
-                class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 transition duration-150 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+                class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 transition duration-150 hover:bg-gray-200 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
               >
                 <svg
                   class="h-5 w-5 flex-none text-gray-400"

@@ -21,14 +21,15 @@ const route = useRoute()
       class="mt-2 min-h-full flex-none basis-1/5 md:static md:block"
     >
       <ul
-        class="mx-2 h-full rounded-lg border border-gray-100 bg-gray-50 p-4 text-lg font-semibold sm:mx-0 sm:rounded-none sm:rounded-r-lg dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+        class="mx-2 h-full rounded-lg border border-gray-400 bg-gray-200 p-4 text-lg font-semibold transition duration-300 sm:mx-0 sm:rounded-none sm:rounded-r-lg dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
       >
         <li class="mb-2 mt-2">
           <RouterLink
             :to="{ name: `${basePath}-dashboard` }"
-            activeClass="bg-blue-700"
+            activeClass="bg-blue-700 text-white"
             :class="{
-              'dark:hover:bg-gray-700': route.path != `${basePath}/dashboard`,
+              'hover:bg-gray-300 dark:hover:bg-gray-700':
+                route.path != `${basePath}/dashboard`,
             }"
             class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
           >
@@ -50,9 +51,9 @@ const route = useRoute()
         <li class="mb-2 mt-2">
           <RouterLink
             :to="{ name: `${basePath}-integrations` }"
-            activeClass="bg-blue-700"
+            activeClass="bg-blue-700 text-white"
             :class="{
-              'dark:hover:bg-gray-700':
+              'hover:bg-gray-300 dark:hover:bg-gray-700':
                 route.path != `${basePath}/integrations`,
             }"
             class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
@@ -78,9 +79,10 @@ const route = useRoute()
         <li class="mb-2">
           <RouterLink
             :to="{ name: `${basePath}-reporting` }"
-            activeClass="bg-blue-700"
+            activeClass="bg-blue-700 text-white"
             :class="{
-              'dark:hover:bg-gray-700': route.path != `${basePath}/reporting`,
+              'hover:bg-gray-300 dark:hover:bg-gray-700':
+                route.path != `${basePath}/reporting`,
             }"
             class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
             ><svg
@@ -104,9 +106,9 @@ const route = useRoute()
         <li class="mb-2">
           <RouterLink
             :to="{ name: `${basePath}-configuration` }"
-            activeClass="bg-blue-700"
+            activeClass="bg-blue-700 text-white"
             :class="{
-              'dark:hover:bg-gray-700':
+              'hover:bg-gray-300 dark:hover:bg-gray-700':
                 route.path != `${basePath}/configuration`,
             }"
             class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"

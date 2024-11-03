@@ -29,7 +29,7 @@ function toggleMenu() {
     <div class="flex min-h-screen flex-col md:flex-row">
       <BasePortalSideMenu v-model:showMenu="showMenu" :basePath="basePath" />
       <div
-        class="mx-2 mt-2 grow rounded-lg border border-gray-100 bg-gray-50 text-lg font-semibold dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+        class="mx-2 mt-2 grow rounded-lg border border-gray-400 bg-gray-200 text-lg font-semibold transition duration-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
       >
         <RouterView name="portalContent" />
       </div>
