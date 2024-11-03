@@ -29,7 +29,7 @@ const route = useRoute()
             activeClass="bg-blue-700 text-white"
             :class="{
               'hover:bg-gray-300 dark:hover:bg-gray-700':
-                route.path != `${basePath}/dashboard`,
+                route.path != `/${basePath}/dashboard`,
             }"
             class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
           >
@@ -54,7 +54,7 @@ const route = useRoute()
             activeClass="bg-blue-700 text-white"
             :class="{
               'hover:bg-gray-300 dark:hover:bg-gray-700':
-                route.path != `${basePath}/integrations`,
+                route.path != `/${basePath}/integrations`,
             }"
             class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
           >
@@ -82,7 +82,7 @@ const route = useRoute()
             activeClass="bg-blue-700 text-white"
             :class="{
               'hover:bg-gray-300 dark:hover:bg-gray-700':
-                route.path != `${basePath}/reporting`,
+                route.path != `/${basePath}/reporting`,
             }"
             class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
             ><svg
@@ -109,7 +109,7 @@ const route = useRoute()
             activeClass="bg-blue-700 text-white"
             :class="{
               'hover:bg-gray-300 dark:hover:bg-gray-700':
-                route.path != `${basePath}/configuration`,
+                route.path != `/${basePath}/configuration`,
             }"
             class="block flex flex-row items-center space-x-2 rounded px-3 py-2 text-gray-900 dark:text-white"
           >
